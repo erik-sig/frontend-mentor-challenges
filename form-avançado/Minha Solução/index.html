@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="steps-container">
+                <div class="steps">
+                    <div class="step-number current-step">1</div>
+                    <div class="step-infos">
+                        <p>STEP 1</p>
+                        <h4>YOUR INFO</h4>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step-number">2</div>
+                    <div class="step-infos">
+                        <p>STEP 2</p>
+                        <h4>SELECT PLAN</h4>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step-number">3</div>
+                    <div class="step-infos">
+                        <p>STEP 3</p>
+                        <h4>ADD-ONS</h4>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step-number">4</div>
+                    <div class="step-infos">
+                        <p>STEP 4</p>
+                        <h4>SUMMARY</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="your-info-container containers">
+                <h1>Personal info</h1>
+                <p>Please provide your name, email address, and phone number.</p>
+                <form>
+                    <div class="input-container">
+                        <label for="">Name
+                            <span class="span-error hide">This field is required</span></label>
+                        <input class="personal-input" type="text" placeholder="e.g Stephen King" maxlength="30">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="">Email Address <span class="span-error hide">This field is required</span></label>
+                        <input class="personal-input" type="text" placeholder="e.g stephenking@lorem.com"
+                            maxlength="30">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="">Phone Number <span class="span-error hide">This field is required</span></label>
+                        <input class="personal-input" type="text" placeholder="e.g +1 234 567 890" maxlength="15">
+                    </div>
+
+                </form>
+                <div class="button-container">
+                    <button class="next-step">Next Step</button>
+                </div>
+            </div>
+            <div class="select-plan-container hide containers">
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly or yearly biling.</p>
+                <div class="options-container">
+                    <div class="option">
+                        <div id="arcade-img"></div>
+                        <h3>Arcade</h3>
+                        <p class="option-price">$9/mo</p>
+                    </div>
+                    <div class="option">
+                        <div id="advanced-img"></div>
+                        <h3>Advanced</h3>
+                        <p class="option-price">$12/mo</p>
+                    </div>
+                    <div class="option">
+                        <div id="pro-img"></div>
+                        <h3>Pro</h3>
+                        <p class="option-price">$15/mo</p>
+                    </div>
+                </div>
+                <div class="switcher-container">
+                    <p class="month date-selected">Monthly</p>
+                    <label class="switch">
+                        <input class="switcher" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="year">Yearly</p>
+                </div>
+                <div class="button-container2">
+                    <button class="go-back-btn">Go Back</button>
+                    <button class="next-step">Next Step</button>
+                </div>
+            </div>
+            <div class="add-ons-container hide containers">
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience</p>
+                <div class="options-add-ons-container">
+                    <div class="option2">
+                        <input class="addon-checkbox" type="checkbox">
+                        <div class="add-ons-infos">
+                            <h3>Online service</h3>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                        <p class="addon-price">+$1/mo</p>
+                    </div>
+                    <div class="option2">
+                        <input class="addon-checkbox" type="checkbox">
+                        <div class="add-ons-infos">
+                            <h3>Larger storage</h3>
+                            <p>Extra 1TB of cloud save</p>
+                        </div>
+                        <p class="addon-price">+$2/mo</p>
+                    </div>
+                    <div class="option2">
+                        <input class="addon-checkbox" type="checkbox">
+                        <div class="add-ons-infos">
+                            <h3>Customizable Profile</h3>
+                            <p>Custom theme on your profile</p>
+                        </div>
+                        <p class="addon-price">+$2/mo</p>
+                    </div>
+                </div>
+                <div class="button-container2">
+                    <button class="go-back-btn">Go Back</button>
+                    <button class="next-step">Next Step</button>
+                </div>
+            </div>
+            <div class="summary-container hide containers">
+                <h1>Finishing up</h1>
+                <p>Double-check everything looks OK before confirming.</p>
+                <div class="summary">
+                    <div class="chosen-plan-container">
+                        <div class="chosen-main-infos">
+                            <h3 id="chosen-plan">Arcade(monthly)</h3>
+                            <h3 id="chosen-plan-price">20</h3>
+                        </div>
+                        <hr>
+                        <div class="chosen-infos hide">
+                            <p></p>
+                            <h4></h4>
+                        </div>
+                    </div>
+                    <div class="total-price-container">
+                        <p id="total-price-text">Total</p>
+                        <h2 id="total-price">10</h2>
+                    </div>
+                </div>
+                <div class="button-container2">
+                    <button class="go-back-btn">Go Back</button>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+            </div>
+            <div class="final-container containers hide">
+                <div class="img-thanks"></div>
+                <h1>Thank you!</h1>
+                <p>Thanks for confirming your subscription! We hope you have fun using our plataform. If you ever need
+                    support, please feel free to email us at support@loremgaming.com.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

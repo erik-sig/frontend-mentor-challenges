@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@100;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.container {
+    min-height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.card {
+    background-color: var(--White);
+    width: 40vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card .left-card {
+    width: 100%;
+}
+
+.card .left-card img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.card .right-card {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 30px;
+}
+
+.card .right-card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card .right-card h3 {
+    font-family: Montserrat;
+    letter-spacing: 7px;
+    font-size: 12px;
+    color: rgb(0, 0, 0, 0.5)
+}
+
+.card .right-card h1 {
+    font-family: Fraunces;
+}
+
+.card .right-card p {
+    font-family: Montserrat;
+    color: rgb(0, 0, 0, 0.6);
+    line-height: 23px;
+    font-size: 14px;
+}
+
+.card .right-card .price {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: Fraunces;
+}
+
+.card .right-card .price h1 {
+    color: var(--Darkcyan);
+}
+
+.card .right-card .price h5 {
+    margin-left: 20px;
+    color: rgb(0, 0, 0, 0.4);
+    text-decoration: line-through;
+    font-family: Montserrat;
+}
+
+.card .right-card .btn {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    font-family: Montserrat;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card .right-card .btn:hover {
+    background-color: var(--Verydarkblue);
+}
+
+.card .right-card .btn img {
+    margin-right: 10px;
+}
+
+@media (max-width: 500px){
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .container {
+        padding: 18px;
+    }
+    
+    .card .right-card {
+        margin: 0 auto;
+        padding: 30px 10px 30px 10px;
+    }
+
+    .card .right-card .text {
+        font-size: 14px;
+    }
+
+    .card .left-card {
+        background-image: url("../imgs/image-product-mobile.jpg");
+        height: 220px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 8px 8px 0px 0px;
+    }    
+
+    .card .left-card img {
+        display: none;
+        border-radius: 8px;
+    }
+
+    .card .right-card .price {
+        margin: 15px 0px 15px 0px;
+    }
+}
